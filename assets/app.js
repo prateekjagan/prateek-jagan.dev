@@ -1,19 +1,23 @@
 const BLACKLISTED_KEY_CODES = [38];
 const COMMANDS = {
   help:
-    'Supported commands: <span class="code">about</span>, <span class="code">experience</span>, <span class="code">education</span>, <span class="code">skills</span>, <span class="code">corgi</span>',
-  about: "Hiya 👋 <br>I'm a Software Engineer that loves corgis.",
+    'Supported commands: <span class="code">about</span>, <span class="code">experience</span>, <span class="code">education</span>, <span class="code">skills</span>, <span class="code">books</span>, <span class="code">clear</span>' ,
+  about: "Hello there 👋 <br>I'm a Software Engineer that loves photography, reading and travelling.<br> (^_^)",
   skills:
-    '<span class="code">Languages:</span> JavaScript, TypeScript, PHP, Java, Python, C, HTML, CSS',
+    '<span class="code">Languages:</span> Java 8, JavaScript, NodeJS, Python3, HTML, CSS <br><span class="code">Technologies:</span> Spring Boot, React JS, Cassandra, Redis, AWS Cloudformation, AWS SAM',
   education:
-    '<strong class="header-name">University of Central Florida</strong><br>B.S. Information Technology',
+    '<strong class="header-name">Institute of Engineering and Technology - DAVV, Indore</strong><br>B.E. Information Technology (2015-2019)<br>GPA - 8.07/10<br><br><strong class="header-name">Campion School, Bhopal</strong><br>AISSCE - Higher Secondary (2014-2015)<br>Percentage - 92.60%',
   resume:
     "<a href='./joey_colon_resume.pdf' class='success link'>resume.pdf</a>",
   experience:
-    '<strong class="header-name">Uber (Jan. 2021 - Present)</strong><br><i>Software Engineer</i><br><strong class="header-name">Uber (May 2020 - Aug. 2020)</strong><br><i>Software Engineering Intern</i><br><strong class="header-name">Honey (Jan. 2020 - Mar. 2020)</strong><br><i>Software Engineering Intern</i><br> <strong class="header-name">LSQ (Jan. 2019 - April 2019)</strong> <br><i>Software Engineering Intern</i>',
-  corgi:
-    "My top 3 favorite corgis (click to view):<br><a href='https://www.instagram.com/bearorcorgi/' class='success link'>Bear</a>, <a href='https://www.instagram.com/lychee_the_corgi/' class='success link'>Mochee</a>, <a href='https://www.instagram.com/thecorgijack/' class='success link'>Jack</a>",
-};
+    'July 2019 - Present<br> <i>Support Engineer II</i> <br><strong class="header-name">Evive Software Analytics Pvt. Ltd <br></strong><br>Jan. 2019 - June 2019<br><i>DevOps Engineer - Intern</i><br><strong class="header-name">Evive Software Analytics Pvt. Ltd</strong>',
+  books:
+    '<strong class="header-name">Ah! So you like reading.</strong><br> I plan to publish my book someday🤞 till then you can read some of my favorites.<br>1. 1984 by George Orwell <br>2. Why we sleep by Matthew Walker<br>3. Mindset by Carol Dweck',
+  // corgi:
+  //   "My top 3 favorite corgis (click to view):<br><a href='https://www.instagram.com/bearorcorgi/' class='success link'>Bear</a>, <a href='https://www.instagram.com/lychee_the_corgi/' class='success link'>Mochee</a>, <a href='https://www.instagram.com/thecorgijack/' class='success link'>Jack</a>",
+  clear:
+    "clearing the screen ---",
+  };
 let userInput, terminalOutput;
 
 const app = () => {
@@ -33,7 +37,10 @@ const execute = function executeCommand(input) {
   if (!COMMANDS.hasOwnProperty(input)) {
     output += `<div class="terminal-line">no such command: ${input}</div>`;
     console.log('Oops! no such command');
-  } else {
+  } if (input == 'clear') {
+    window.location.reload()
+  } 
+  else {
     output += COMMANDS[input];
   }
 
