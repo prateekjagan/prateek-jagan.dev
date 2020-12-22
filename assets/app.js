@@ -8,7 +8,7 @@ const COMMANDS = {
   education:
     '<strong class="header-name">Institute of Engineering and Technology - DAVV, Indore</strong><br>B.E. Information Technology (2015-2019)<br>GPA - 8.07/10<br><br><strong class="header-name">Campion School, Bhopal</strong><br>AISSCE - Higher Secondary (2014-2015)<br>Percentage - 92.60%',
   resume:
-    "<a href='./joey_colon_resume.pdf' class='success link'>resume.pdf</a>",
+    "<a href='./Prateek_Jagan_resume.pdf' class='success link'>Prateek_Jagan.pdf</a>",
   experience:
     'July 2019 - Present<br> <i>Support Engineer II</i> <br><strong class="header-name">Evive Software Analytics Pvt. Ltd <br></strong><br>Jan. 2019 - June 2019<br><i>DevOps Engineer - Intern</i><br><strong class="header-name">Evive Software Analytics Pvt. Ltd</strong>',
   books:
